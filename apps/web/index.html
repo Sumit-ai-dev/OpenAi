@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VisionAI Nexus</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>VisionAI Nexus</h1>
+        <p class="subtitle">Voice → Vision → Spatial Guidance</p>
+      </header>
+
+      <section class="panel">
+        <div class="status" id="status">Idle</div>
+        <div class="controls">
+          <button id="start-record">Start Recording</button>
+          <button id="stop-record" disabled>Stop Recording</button>
+          <button id="capture-frame">Capture Frame</button>
+          <button id="analyze" disabled>Analyze</button>
+        </div>
+      </section>
+
+      <section class="panel grid">
+        <div>
+          <h2>Camera Preview</h2>
+          <video id="preview" autoplay playsinline></video>
+          <canvas id="snapshot" hidden></canvas>
+        </div>
+        <div>
+          <h2>Transcript</h2>
+          <div class="output" id="transcript">Waiting for audio...</div>
+          <h2>Scene Description</h2>
+          <div class="output" id="description">Waiting for analysis...</div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Audio Output</h2>
+        <audio id="audio" controls></audio>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

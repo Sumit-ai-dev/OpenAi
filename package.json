@@ -1,0 +1,10 @@
+{
+  "name": "visionai-nexus",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node services/api/server.js",
+    "start": "node services/api/server.js"
+  }
+}
